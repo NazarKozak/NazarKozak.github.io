@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On-Device Disfluency Detection with Voice Stress Association Analysis — Nazar Kozak</title>
+
+    <!-- Google Scholar meta tags -->
+    <meta name="citation_title" content="On-Device Disfluency Detection with Voice Stress Association Analysis: A Mobile Framework Validated on SEP-28K">
+    <meta name="citation_author" content="Kozak, Nazar">
+    <meta name="citation_date" content="2026">
+    <meta name="citation_year" content="2026">
+    <meta name="citation_publication_date" content="2026/03/31">
+    <meta name="citation_journal_title" content="IEEE Signal Processing Letters">
+    <meta name="citation_pdf_url" content="https://nazarkozak.github.io/disfluo-paper.pdf">
+    <meta name="citation_language" content="en">
+    <meta name="citation_keywords" content="disfluency detection; stuttering; on-device inference; CoreML; voice stress analysis; SEP-28K; mobile speech processing">
+
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="On-Device Disfluency Detection with Voice Stress Association Analysis: A Mobile Framework Validated on SEP-28K">
+    <meta name="DC.creator" content="Kozak, Nazar">
+    <meta name="DC.date" content="2026-03-31">
+    <meta name="DC.type" content="article">
+    <meta name="DC.language" content="en">
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        h1 { font-size: 1.5em; margin-bottom: 8px; }
+        .authors { font-size: 1.05em; margin-bottom: 4px; }
+        .venue { color: #555; font-style: italic; margin-bottom: 24px; }
+        .abstract { background: #f8f8f8; padding: 16px 20px; border-radius: 6px; margin-bottom: 24px; }
+        .abstract h3 { margin-top: 0; }
+        .links a {
+            display: inline-block;
+            margin-right: 12px;
+            padding: 8px 16px;
+            background: #0366d6;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        .links a:hover { background: #0255b3; }
+        .links a.secondary { background: #f0f0f0; color: #333; }
+        .links a.secondary:hover { background: #e0e0e0; }
+        .details { margin-top: 24px; }
+        .details dt { font-weight: 600; margin-top: 8px; }
+        .details dd { margin-left: 0; color: #555; }
+        .back { margin-top: 32px; }
+        .back a { color: #0366d6; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h1>On-Device Disfluency Detection with Voice Stress Association Analysis: A Mobile Framework Validated on SEP-28K</h1>
+    <p class="authors">Nazar Kozak</p>
+    <p class="venue">Submitted to IEEE Signal Processing Letters, 2026</p>
+
+    <div class="links">
+        <a href="disfluo-paper.pdf">Download PDF</a>
+        <a href="index.html" class="secondary">All publications</a>
+    </div>
+
+    <div class="abstract">
+        <h3>Abstract</h3>
+        <p>We present DisfluoSDK, an on-device framework for real-time speech disfluency detection and voice stress analysis, motivated by privacy-sensitive speech therapy applications. The system classifies five disfluency types — prolongation, block, sound repetition, word repetition, and interjection — from 3-second mel-spectrogram clips using CoreML on iOS. We evaluate two architectures on the SEP-28K dataset (20,131 clips, 5-fold episode-grouped cross-validation): a custom 4-block convolutional neural network (617K parameters, 1.2 MB) achieving macro-F1 of 0.382, and an adapted ResNet-18 (11.2M parameters, 21 MB) achieving macro-F1 of 0.404. Both models achieve sub-millisecond inference (0.62–0.79 ms) on an Apple M1 processor, enabling 3,000-times real-time processing. We additionally examine the relationship between voice stress markers (jitter, shimmer, fundamental frequency variability) and disfluency labels across a subset of 14,645 clips with valid pitch estimates, finding no practically meaningful linear associations (all absolute correlations below 0.05, negligible effect sizes). To our knowledge, this is the first framework to perform multi-type disfluency classification entirely on-device.</p>
+    </div>
+
+    <dl class="details">
+        <dt>Keywords</dt>
+        <dd>Disfluency detection, stuttering, on-device inference, CoreML, voice stress analysis, SEP-28K, mobile speech processing</dd>
+
+        <dt>Status</dt>
+        <dd>Under peer review at IEEE Signal Processing Letters (submitted March 31, 2026)</dd>
+
+        <dt>Models</dt>
+        <dd>DisfluencyCNN (617K params, 1.2 MB, 0.62 ms) · ResNet-18 Adapted (11.2M params, 21 MB, 0.79 ms)</dd>
+
+        <dt>Dataset</dt>
+        <dd>SEP-28K (20,131 clips, 5-fold episode-grouped cross-validation)</dd>
+
+        <dt>Author</dt>
+        <dd>Nazar Kozak — Kozak Technologies Inc., Los Angeles, CA, USA</dd>
+
+        <dt>Contact</dt>
+        <dd><a href="mailto:nzrkzk@gmail.com">nzrkzk@gmail.com</a> · <a href="https://orcid.org/0009-0001-8858-6098">ORCID</a></dd>
+    </dl>
+
+    <p class="back"><a href="index.html">&larr; Back to all publications</a></p>
+</body>
+</html>
