@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Baseline Calibration for Voice Stress Assessment — Nazar Kozak</title>
+
+    <!-- Google Scholar meta tags -->
+    <meta name="citation_title" content="Adaptive Baseline Calibration for Voice Stress Assessment in Speech Disfluency Monitoring">
+    <meta name="citation_author" content="Kozak, Nazar">
+    <meta name="citation_date" content="2026">
+    <meta name="citation_year" content="2026">
+    <meta name="citation_publication_date" content="2026/04/06">
+    <meta name="citation_technical_report_institution" content="Kozak Technologies Inc.">
+    <meta name="citation_pdf_url" content="https://nazarkozak.github.io/adaptive-baseline.pdf">
+    <meta name="citation_public_url" content="https://engrxiv.org/preprint/view/6768">
+    <meta name="citation_language" content="en">
+    <meta name="citation_keywords" content="voice stress analysis; adaptive baseline; Welford's algorithm; pitch detection; YIN; pediatric speech; speaker normalization; F0 variability">
+
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="Adaptive Baseline Calibration for Voice Stress Assessment in Speech Disfluency Monitoring">
+    <meta name="DC.creator" content="Kozak, Nazar">
+    <meta name="DC.date" content="2026-04-06">
+    <meta name="DC.type" content="article">
+    <meta name="DC.language" content="en">
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        h1 { font-size: 1.5em; margin-bottom: 8px; }
+        .authors { font-size: 1.05em; margin-bottom: 4px; }
+        .venue { color: #555; font-style: italic; margin-bottom: 24px; }
+        .abstract { background: #f8f8f8; padding: 16px 20px; border-radius: 6px; margin-bottom: 24px; }
+        .abstract h3 { margin-top: 0; }
+        .links a {
+            display: inline-block;
+            margin-right: 12px;
+            padding: 8px 16px;
+            background: #0366d6;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        .links a:hover { background: #0255b3; }
+        .links a.secondary { background: #f0f0f0; color: #333; }
+        .links a.secondary:hover { background: #e0e0e0; }
+        .details { margin-top: 24px; }
+        .details dt { font-weight: 600; margin-top: 8px; }
+        .details dd { margin-left: 0; color: #555; }
+        .back { margin-top: 32px; }
+        .back a { color: #0366d6; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h1>Adaptive Baseline Calibration for Voice Stress Assessment in Speech Disfluency Monitoring</h1>
+    <p class="authors">Nazar Kozak</p>
+    <p class="venue">engrXiv Preprint, April 2026 &middot; Planned submission to Speech Communication</p>
+
+    <div class="links">
+        <a href="adaptive-baseline.pdf">Download PDF</a>
+        <a href="https://engrxiv.org/preprint/view/6768" class="secondary">engrXiv</a>
+        <a href="index.html" class="secondary">All publications</a>
+    </div>
+
+    <div class="abstract">
+        <h3>Abstract</h3>
+        <p>Voice stress assessment systems commonly employ fixed thresholds for classifying acoustic features (jitter, shimmer, F0 variability) into stress levels. We show that fixed thresholds produce highly skewed stress score distributions when applied to diverse speakers, with 61.4% of clips scored as high-stress (≥0.8) in the SEP-28K dataset — likely an artifact of inter-speaker vocal variability rather than genuine stress variation. We propose an adaptive baseline algorithm using Welford's online algorithm for per-speaker calibration, followed by exponential moving average tracking. Applied to 14,645 clips with valid pitch estimates, the adaptive approach produces a more symmetric distribution (μ=0.530, σ=0.162) with substantially fewer extreme scores. We additionally report that YIN-based pitch detection achieves 98.1% F0 extraction rate on SEP-28K, compared to 12.1% with naive autocorrelation. We discuss implications for pediatric speech applications, where children's vocal characteristics differ substantially from adults.</p>
+    </div>
+
+    <dl class="details">
+        <dt>Keywords</dt>
+        <dd>Voice stress analysis, adaptive baseline, Welford's algorithm, pitch detection, YIN, pediatric speech, speaker normalization, F0 variability</dd>
+
+        <dt>Status</dt>
+        <dd>Preprint on engrXiv (April 2026) &middot; Planned submission to Speech Communication</dd>
+
+        <dt>Key Results</dt>
+        <dd>Fixed thresholds: 61.4% high-stress (overestimation) &middot; Adaptive baseline: symmetric distribution (μ=0.53, σ=0.16) &middot; YIN: 98.1% F0 rate vs 12.1% naive</dd>
+
+        <dt>Dataset</dt>
+        <dd>SEP-28K (14,645 clips with valid pitch estimates)</dd>
+
+        <dt>Author</dt>
+        <dd>Nazar Kozak — Kozak Technologies Inc., Los Angeles, CA, USA</dd>
+
+        <dt>Contact</dt>
+        <dd><a href="mailto:nzrkzk@gmail.com">nzrkzk@gmail.com</a> &middot; <a href="https://orcid.org/0009-0001-8858-6098">ORCID</a></dd>
+    </dl>
+
+    <p class="back"><a href="index.html">&larr; Back to all publications</a></p>
+</body>
+</html>

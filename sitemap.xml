@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nazarkozak.github.io/</loc>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-04-07</lastmod>
   </url>
   <url>
     <loc>https://nazarkozak.github.io/disfluo.html</loc>
@@ -11,6 +11,22 @@
   <url>
     <loc>https://nazarkozak.github.io/disfluo-paper.pdf</loc>
     <lastmod>2026-04-01</lastmod>
+  </url>
+  <url>
+    <loc>https://nazarkozak.github.io/stress-independence.html</loc>
+    <lastmod>2026-04-07</lastmod>
+  </url>
+  <url>
+    <loc>https://nazarkozak.github.io/stress-independence.pdf</loc>
+    <lastmod>2026-04-07</lastmod>
+  </url>
+  <url>
+    <loc>https://nazarkozak.github.io/adaptive-baseline.html</loc>
+    <lastmod>2026-04-07</lastmod>
+  </url>
+  <url>
+    <loc>https://nazarkozak.github.io/adaptive-baseline.pdf</loc>
+    <lastmod>2026-04-07</lastmod>
   </url>
   <url>
     <loc>https://nazarkozak.github.io/multidex.html</loc>
