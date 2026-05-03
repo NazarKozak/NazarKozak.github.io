@@ -14,18 +14,31 @@
             line-height: 1.6;
         }
         h1 { font-size: 1.8em; margin-bottom: 4px; }
+        h2 { font-size: 1.3em; margin-top: 40px; padding-bottom: 6px; border-bottom: 1px solid #eee; }
         .subtitle { color: #555; margin-bottom: 32px; }
         .paper { margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid #eee; }
         .paper:last-child { border-bottom: none; }
-        .paper h3 { margin-bottom: 4px; }
+        .paper h3 { margin-bottom: 4px; font-size: 1.05em; }
         .paper h3 a { color: #1a1a1a; text-decoration: none; }
         .paper h3 a:hover { color: #0366d6; }
         .meta { color: #555; font-size: 0.9em; margin-bottom: 8px; }
+        .badge { display: inline-block; font-size: 0.78em; padding: 2px 8px; border-radius: 10px; margin-left: 6px; vertical-align: 1px; }
+        .badge.under-review { background: #fff4e0; color: #8a5a00; border: 1px solid #f0d999; }
+        .badge.preprint { background: #eaf3ff; color: #0a4d8a; border: 1px solid #b6d7f5; }
+        .badge.published { background: #e6f7eb; color: #186a3b; border: 1px solid #b6e0c4; }
         .links a { margin-right: 16px; color: #0366d6; text-decoration: none; font-size: 0.9em; }
         .links a:hover { text-decoration: underline; }
-        .ids { margin-top: 24px; font-size: 0.85em; color: #777; }
+        .software-item { margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid #eee; }
+        .software-item:last-child { border-bottom: none; }
+        .software-item h3 { margin-bottom: 4px; font-size: 1.0em; }
+        .software-item h3 a { color: #1a1a1a; text-decoration: none; }
+        .software-item h3 a:hover { color: #0366d6; }
+        .recognition ul { padding-left: 20px; margin: 0; }
+        .recognition li { margin-bottom: 6px; }
+        .ids { margin-top: 32px; font-size: 0.85em; color: #777; }
         .ids a { color: #777; }
         footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #eee; font-size: 0.85em; color: #999; }
+        footer a { color: #999; }
     </style>
 </head>
 <body>
@@ -36,19 +49,30 @@
     <h2>Publications</h2>
 
     <div class="paper">
-        <h3><a href="disfluo.html">On-Device Disfluency Detection with Voice Stress Association Analysis: A Mobile Framework Validated on SEP-28K</a></h3>
-        <p class="meta">Nazar Kozak &middot; <em>Submitted to IEEE Signal Processing Letters</em>, 2026</p>
-        <p>We present DisfluoSDK, an on-device framework for real-time speech disfluency detection and voice stress analysis on iOS. CNN models (617K params, 1.2 MB) achieve sub-millisecond CoreML inference. Evaluated on SEP-28K with episode-grouped cross-validation.</p>
+        <h3><a href="https://arxiv.org/abs/2604.27279">Predicting Upcoming Stuttering Events from Three-Second Audio: Stratified Evaluation Reveals Severity-Selective Precursors, and the Model Deploys Fully On-Device</a></h3>
+        <p class="meta">Nazar Kozak &middot; <em>Submitted to IEEE/ACM Transactions on Audio, Speech and Language Processing</em>, 2026 <span class="badge under-review">Under review</span></p>
+        <p>A 616K-parameter CNN trained on SEP-28k that predicts whether the next three-second window will contain a disfluency. Stratified evaluation reveals severity-selective predictive signal: block prediction AUC 0.601 [0.554, 0.651] and sound-rep AUC 0.617 [0.567, 0.667] (95% bootstrap CIs exclude chance) while fillers and word-reps stay at chance. Cross-corpus zero-shot transfer to pediatric Children-Who-Stutter cohort at AUC 0.66. Lossless export to CoreML / ONNX / TFLite, 0.25 ms Apple Neural Engine latency on iPhone 17 Pro Max.</p>
         <p class="links">
-            <a href="disfluo-paper.pdf">PDF</a>
-            <a href="disfluo.html">Details</a>
+            <a href="https://arxiv.org/abs/2604.27279">arXiv:2604.27279</a>
+            <a href="https://doi.org/10.48550/arXiv.2604.27279">DOI</a>
         </p>
     </div>
 
     <div class="paper">
-        <h3><a href="stress-independence.html">Voice Stress Markers Are Orthogonal to Speech Disfluency Labels: A Large-Scale Analysis on SEP-28K</a></h3>
-        <p class="meta">Nazar Kozak &middot; <em>engrXiv Preprint</em>, 2026</p>
-        <p>Large-scale analysis (N=14,645) showing all correlations between voice stress features and disfluency labels are negligible (|r| < 0.05, Cohen's d < 0.04). Supports separating stress and disfluency assessment in multimodal systems.</p>
+        <h3><a href="disfluo.html">On-Device Multi-Type Disfluency Detection with Sub-Millisecond Inference on Apple Silicon</a></h3>
+        <p class="meta">Nazar Kozak &middot; <em>Submitted to Computer Speech &amp; Language</em> (Elsevier), 2026 <span class="badge under-review">Under review</span></p>
+        <p>DisfluoSDK, an on-device framework for real-time speech disfluency detection on iOS. CNN models (617K params, 1.2 MB) achieve sub-millisecond CoreML inference. 5-class evaluation on SEP-28K with episode-grouped cross-validation; cross-platform export fidelity verified across PyTorch and CoreML.</p>
+        <p class="links">
+            <a href="disfluo-paper.pdf">PDF</a>
+            <a href="disfluo.html">Details</a>
+            <a href="https://engrxiv.org/preprint/view/6767">engrXiv</a>
+        </p>
+    </div>
+
+    <div class="paper">
+        <h3><a href="stress-independence.html">Acoustic Voice-Stress Markers Are Empirically Separable from Speech-Disfluency Labels at Clip Level: A Large-Scale Equivalence and Predictive-Baseline Analysis on SEP-28K</a></h3>
+        <p class="meta">Nazar Kozak &middot; <em>Submitted to Speech Communication</em> (Elsevier), 2026 <span class="badge under-review">Under review</span></p>
+        <p>Large-scale analysis (N=14,645) showing voice stress markers are orthogonal to disfluency labels. TOST equivalence testing rejects non-equivalence for all 20 correlations at Bonferroni-adjusted &alpha;=0.0025. Predictive baselines under episode-grouped 5-fold CV land at chance (AUC 0.51-0.55, 95% CIs cover 0.5).</p>
         <p class="links">
             <a href="stress-independence.pdf">PDF</a>
             <a href="stress-independence.html">Details</a>
@@ -57,8 +81,8 @@
     </div>
 
     <div class="paper">
-        <h3><a href="adaptive-baseline.html">Adaptive Baseline Calibration for Voice Stress Assessment in Speech Disfluency Monitoring</a></h3>
-        <p class="meta">Nazar Kozak &middot; <em>engrXiv Preprint</em>, 2026</p>
+        <h3><a href="adaptive-baseline.html">Adaptive Baseline Calibration for Voice Stress Assessment</a></h3>
+        <p class="meta">Nazar Kozak &middot; <em>engrXiv Preprint</em>, 2026 <span class="badge preprint">Preprint</span></p>
         <p>Welford-based adaptive baseline algorithm for per-speaker voice stress calibration. Fixed thresholds overestimate stress (61.4% high-stress); adaptive approach produces symmetric distribution. YIN pitch detection achieves 98.1% F0 rate.</p>
         <p class="links">
             <a href="adaptive-baseline.pdf">PDF</a>
@@ -69,7 +93,7 @@
 
     <div class="paper">
         <h3><a href="multidex.html">Dynamic Multidex Loading for Cross-Platform SDK Integration</a></h3>
-        <p class="meta">Nazar Kozak &middot; <em>engrXiv / Zenodo</em>, 2026</p>
+        <p class="meta">Nazar Kozak &middot; <em>Zenodo</em>, 2026 <span class="badge published">Published</span></p>
         <p>A system for runtime DEX loading on Android that solved the 65K method limit for mobile ad mediation SDKs. Deployed at Appodeal, serving millions of apps.</p>
         <p class="links">
             <a href="multidex-paper.pdf">PDF</a>
@@ -78,13 +102,44 @@
         </p>
     </div>
 
+    <h2>Software &amp; Models</h2>
+
+    <div class="software-item">
+        <h3><a href="https://huggingface.co/nazarkozak/whisper-small-disfluent-smoothed-lora">whisper-small-disfluent-smoothed-lora</a></h3>
+        <p class="meta">LoRA adapter for OpenAI Whisper-small &middot; ASR for stuttered / disfluent speech</p>
+        <p>Smoothed transcription mode &mdash; recovers the speaker's intended words and drops disfluencies. WER 20.46% on FluencyBank Adults Who Stutter (vs 26.04% baseline, &minus;21.4% relative). 13.5 MB adapter, applies on top of base Whisper-small.</p>
+        <p class="links">
+            <a href="https://huggingface.co/nazarkozak/whisper-small-disfluent-smoothed-lora">HuggingFace Hub</a>
+        </p>
+    </div>
+
+    <div class="software-item">
+        <h3><a href="https://huggingface.co/nazarkozak/whisper-small-disfluent-verbatim-lora">whisper-small-disfluent-verbatim-lora</a></h3>
+        <p class="meta">LoRA adapter for OpenAI Whisper-small &middot; verbatim ASR (preserves disfluencies)</p>
+        <p>Verbatim transcription mode &mdash; preserves filled pauses (uh, um), exact word repetitions, and partial-word fragments for clinical / research use. WER 20.29% on held-out validation (&minus;22% relative).</p>
+        <p class="links">
+            <a href="https://huggingface.co/nazarkozak/whisper-small-disfluent-verbatim-lora">HuggingFace Hub</a>
+        </p>
+    </div>
+
+    <h2>Recognition &amp; Service</h2>
+
+    <div class="recognition">
+        <ul>
+            <li><strong>IEEE Senior Member</strong> (No. 101490965) &mdash; peer-reviewed elevation</li>
+            <li><strong>Fellow, IET</strong> (Institution of Engineering and Technology) &mdash; application under assessment, 2026</li>
+            <li><strong>Toptal Top 3% Network Member</strong> since 2021</li>
+        </ul>
+    </div>
+
     <div class="ids">
         <a href="https://scholar.google.com/citations?user=49Ju4bcAAAAJ">Google Scholar</a> &middot;
         <a href="https://orcid.org/0009-0001-8858-6098">ORCID: 0009-0001-8858-6098</a> &middot;
         <a href="https://github.com/NazarKozak">GitHub</a> &middot;
+        <a href="https://huggingface.co/nazarkozak">HuggingFace</a> &middot;
         <a href="mailto:nzrkzk@gmail.com">nzrkzk@gmail.com</a>
     </div>
 
-    <footer>Kozak Technologies Inc. &middot; Los Angeles, CA</footer>
+    <footer><a href="https://kozaktech.com">Kozak Technologies Inc.</a> &middot; Los Angeles, CA</footer>
 </body>
 </html>
